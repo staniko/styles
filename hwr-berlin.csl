@@ -192,16 +192,12 @@
    <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true">
       <layout delimiter="; " suffix=".">
          <choose>
-            <if position="ibid-with-locator">
-               <group delimiter=", ">
-                  <text term="ibid" text-case="capitalize-first"/>
-                  <text macro="point-locators-subsequent"/>
-               </group>
-            </if>
-            <else-if position="ibid">
-               <text term="ibid" text-case="capitalize-first"/>
-            </else-if>
-            <else>
+        <if position="ibid">
+           <group delimiter=", ">
+              <text term="ibid" text-case="capitalize-first"/>
+              <text macro="point-locators-subsequent"/>
+           </group>
+        </if>
                <text macro="author"/>
                <text macro="year-date" prefix=" (" suffix=")"/>
                <text macro="point-locators"/>
